@@ -1,13 +1,12 @@
-FROM 2chat/ubuntu:xenial
+FROM ubuntu
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV PATH $PATH:/usr/local/nginx/sbin
 
-ENV NGINX_VERSION 1.13.3
+ENV NGINX_VERSION 1.20.1
 ENV NGINX_TS_VERSION 0.1.1
 
 EXPOSE 8080
-EXPOSE 0-65535/udp
 
 # create directories
 RUN mkdir /src /config /logs /data
